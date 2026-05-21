@@ -27,7 +27,7 @@ export default function Hero() {
           color: 'var(--muted)',
           textTransform: 'uppercase' as const,
           letterSpacing: '0.1em',
-        }}>Alaquas, Valencia — mayo 2026</span>
+        }}>Alaquas, Valencia </span>
       </div>
 
       <h1 style={{
