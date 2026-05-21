@@ -154,17 +154,17 @@ export default function Hero() {
           <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'rgba(225,29,72,0.5)' }} />
           <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'rgba(245,158,11,0.3)' }} />
           <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'rgba(0,212,170,0.3)' }} />
-          <span style={{ fontFamily: 'var(--mono)', fontSize: '10px', color: 'var(--muted)', marginLeft: '8px' }}>borja@dev ~ </span>
+          <span style={{ fontFamily: 'var(--mono)', fontSize: '10px', color: 'var(--muted)', marginLeft: '8px' }}>borja@dev ❯ </span>
         </div>
         <div style={{ padding: '1.25rem' }}>
           {[
-           { cmd: '$ Nombre', out: 'Borja Rodríguez · Junior Backend Dev' },
-{ cmd: '$ Ubicacion', out: 'Alaquas, Valencia, España' },
-{ cmd: '$ Estado', out: '● OPEN TO WORK' },
-{ cmd: '$ Stack', out: 'Java · Spring Boot · REST APIs · SQL' },
-{ cmd: '$ Formacion', out: 'DAM + Backend autodidacta' },
-{ cmd: '$ Objetivo', out: 'Junior Backend contratado · dic 2026' },
-{ cmd: '$ Contacto', out: 'borja8.dev@gmail.com' },
+            { cmd: '❯ nombre', out: 'Borja Rodríguez · Junior Backend Dev' },
+{ cmd: '❯ ubicacion', out: 'Alaquas, Valencia, España' },
+{ cmd: '❯ estado', out: '● OPEN TO WORK' },
+{ cmd: '❯ stack', out: 'Java · Spring Boot · REST APIs · SQL' },
+{ cmd: '❯ formacion', out: 'DAM + Backend autodidacta' },
+{ cmd: '❯ objetivo', out: 'Junior Backend contratado · dic 2026' },
+{ cmd: '❯ contacto', out: 'borja8.dev@gmail.com' },
           ].map((line, i) => (
             <div key={i} style={{ marginBottom: '10px' }}>
               <div style={{ fontFamily: 'var(--mono)', fontSize: '11px', color: 'var(--acc2)', letterSpacing: '0.04em' }}>{line.cmd}</div>
