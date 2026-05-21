@@ -1,14 +1,25 @@
 'use client'
+import { useEffect, useState } from 'react'
 
 export default function Hero() {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 1024)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
+
   return (
-    <section style={{
-      padding: '4rem 2rem 3rem',
-      display: 'flex',
-      alignItems: 'flex-start',
-      gap: '4rem',
-    }}>
-      <div style={{ maxWidth: '520px', flexShrink: 0 }}>
+ <section style={{
+  padding: isMobile ? '2rem 1.5rem' : '4rem 2rem 3rem',
+  display: 'flex',
+  flexDirection: isMobile ? 'column' : 'row' as const,
+  alignItems: 'flex-start',
+  gap: isMobile ? '1rem' : '4rem',
+}}>
+      <div style={{ maxWidth: '520px', flexShrink: 0, width: '100%' }}>
         <div style={{
           display: 'flex',
           alignItems: 'center',
@@ -60,34 +71,36 @@ export default function Hero() {
           </span>
         </h1>
 
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          border: '1px solid rgba(255,255,255,0.05)',
-          borderRadius: '3px',
-          overflow: 'hidden',
-          marginBottom: '1.75rem',
-          maxWidth: '520px',
-        }}>
-          {[
-            { text: '24 años', hi: false },
-            { text: 'DAM en progreso', hi: true },
-            { text: 'Feb 2026 → ahora', hi: false },
-            { text: '3-4 meses · proyectos reales', hi: true },
-          ].map((item, i) => (
-            <span key={i} style={{
-              fontFamily: 'var(--mono)',
-              fontSize: '10px',
-              color: item.hi ? 'var(--acc2)' : 'var(--muted)',
-              padding: '7px 14px',
-              letterSpacing: '0.08em',
-              borderRight: '1px solid rgba(255,255,255,0.05)',
-              background: item.hi ? 'rgba(245,158,11,0.04)' : 'transparent',
-            }}>
-              {item.text}
-            </span>
-          ))}
-        </div>
+        {!isMobile && (
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            border: '1px solid rgba(255,255,255,0.05)',
+            borderRadius: '3px',
+            overflow: 'hidden',
+            marginBottom: '1.75rem',
+            maxWidth: '520px',
+          }}>
+            {[
+              { text: '24 años', hi: false },
+              { text: 'DAM en progreso', hi: true },
+              { text: 'Feb 2026 → ahora', hi: false },
+              { text: '3-4 meses · proyectos reales', hi: true },
+            ].map((item, i) => (
+              <span key={i} style={{
+                fontFamily: 'var(--mono)',
+                fontSize: '10px',
+                color: item.hi ? 'var(--acc2)' : 'var(--muted)',
+                padding: '7px 14px',
+                letterSpacing: '0.08em',
+                borderRight: '1px solid rgba(255,255,255,0.05)',
+                background: item.hi ? 'rgba(245,158,11,0.04)' : 'transparent',
+              }}>
+                {item.text}
+              </span>
+            ))}
+          </div>
+        )}
 
         <p style={{
           fontSize: '16px',
@@ -135,50 +148,52 @@ export default function Hero() {
         </div>
       </div>
 
-      <div style={{
-        flex: 1,
-        background: 'var(--bg2)',
-        border: '1px solid rgba(255,255,255,0.05)',
-        borderRadius: '4px',
-        overflow: 'hidden',
-        marginTop: '1rem',
-      }}>
+      {!isMobile && (
         <div style={{
-          background: 'var(--bg3)',
-          padding: '8px 14px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '6px',
-          borderBottom: '1px solid rgba(255,255,255,0.05)',
+          flex: 1,
+          background: 'var(--bg2)',
+          border: '1px solid rgba(255,255,255,0.05)',
+          borderRadius: '4px',
+          overflow: 'hidden',
+          marginTop: '1rem',
         }}>
-          <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'rgba(225,29,72,0.5)' }} />
-          <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'rgba(245,158,11,0.3)' }} />
-          <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'rgba(0,212,170,0.3)' }} />
-          <span style={{ fontFamily: 'var(--mono)', fontSize: '10px', color: 'var(--muted)', marginLeft: '8px' }}>borja@dev ❯ </span>
+          <div style={{
+            background: 'var(--bg3)',
+            padding: '8px 14px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+            borderBottom: '1px solid rgba(255,255,255,0.05)',
+          }}>
+            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'rgba(225,29,72,0.5)' }} />
+            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'rgba(245,158,11,0.3)' }} />
+            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'rgba(0,212,170,0.3)' }} />
+            <span style={{ fontFamily: 'var(--mono)', fontSize: '10px', color: 'var(--muted)', marginLeft: '8px' }}>borja@dev ❯ </span>
+          </div>
+          <div style={{ padding: '1.25rem' }}>
+            {[
+              { cmd: '❯ nombre', out: 'Borja Rodríguez · Junior Backend Dev' },
+              { cmd: '❯ ubicacion', out: 'Alaquas, Valencia, España' },
+              { cmd: '❯ estado', out: '● OPEN TO WORK' },
+              { cmd: '❯ stack', out: 'Java · Spring Boot · REST APIs · SQL' },
+              { cmd: '❯ formacion', out: 'DAM + Backend autodidacta' },
+              { cmd: '❯ objetivo', out: 'Junior Backend contratado · dic 2026' },
+              { cmd: '❯ contacto', out: 'borja8.dev@gmail.com' },
+            ].map((line, i) => (
+              <div key={i} style={{ marginBottom: '10px' }}>
+                <div style={{ fontFamily: 'var(--mono)', fontSize: '11px', color: 'var(--acc2)', letterSpacing: '0.04em' }}>{line.cmd}</div>
+                <div style={{
+                  fontFamily: 'var(--mono)',
+                  fontSize: '11px',
+                  color: line.cmd === '❯ estado' ? 'var(--acc)' : 'var(--muted)',
+                  paddingLeft: '12px',
+                  letterSpacing: '0.04em',
+                }}>{line.out}</div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div style={{ padding: '1.25rem' }}>
-          {[
-            { cmd: '❯ nombre', out: 'Borja Rodríguez · Junior Backend Dev' },
-{ cmd: '❯ ubicacion', out: 'Alaquas, Valencia, España' },
-{ cmd: '❯ estado', out: '● OPEN TO WORK' },
-{ cmd: '❯ stack', out: 'Java · Spring Boot · REST APIs · SQL' },
-{ cmd: '❯ formacion', out: 'DAM + Backend autodidacta' },
-{ cmd: '❯ objetivo', out: 'Junior Backend contratado · dic 2026' },
-{ cmd: '❯ contacto', out: 'borja8.dev@gmail.com' },
-          ].map((line, i) => (
-            <div key={i} style={{ marginBottom: '10px' }}>
-              <div style={{ fontFamily: 'var(--mono)', fontSize: '11px', color: 'var(--acc2)', letterSpacing: '0.04em' }}>{line.cmd}</div>
-              <div style={{
-                fontFamily: 'var(--mono)',
-                fontSize: '11px',
-                color: line.cmd === '$ status' ? 'var(--acc)' : 'var(--muted)',
-                paddingLeft: '12px',
-                letterSpacing: '0.04em',
-              }}>{line.out}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+      )}
     </section>
   )
 }

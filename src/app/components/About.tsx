@@ -23,7 +23,7 @@ export default function About() {
         fontFamily: 'var(--body)',
       }}>Por qué soy diferente</h2>
 
-      <div style={{
+      <div className="two-col-grid" style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
         gap: '2rem',

@@ -22,7 +22,7 @@ export default function Navbar() {
         BORJA.DEV
       </span>
 
-      <ul style={{
+      <ul className="nav-links-mobile" style={{
         display: 'flex',
         gap: '1.5rem',
         listStyle: 'none',

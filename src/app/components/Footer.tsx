@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer style={{
+    <footer className="footer-mobile" style={{
       padding: '1.5rem 2rem',
       borderTop: '1px solid rgba(255,255,255,0.04)',
       display: 'flex',
