@@ -132,7 +132,7 @@ export default function Hero() {
             textDecoration: 'none',
             textTransform: 'uppercase' as const,
           }}>Ver proyectos</a>
-          <a href="/cv" style={{
+          <a href="/Borja_Rodriguez_CV_2026.pdf" target="_blank" rel="noopener noreferrer" style={{
             background: 'transparent',
             color: 'var(--muted)',
             border: '1px solid rgba(255,255,255,0.08)',
