@@ -1,104 +1,242 @@
 export default function Learning() {
   const roadmap = [
-    { label: 'Java', status: 'done', time: '' },
-    { label: 'Spring Boot', status: 'now', time: '' },
-    { label: 'Docker', status: 'next', time: 'Q3 26' },
-    { label: 'K8s', status: 'next', time: 'Q4 26' },
-    { label: 'CI/CD', status: 'next', time: 'Q4 26' },
-    { label: 'Dist. Arch', status: 'next', time: 'Q1 27' },
+    { label: 'Java', status: 'done', time: '✓' },
+    { label: 'Spring Boot', status: 'now', time: 'NOW' },
+    { label: 'Docker', status: 'next', time: 'SOON' },
+    { label: 'K8s', status: 'next', time: 'SOON' },
+    { label: 'CI/CD', status: 'next', time: 'SOON' },
+    { label: 'Dist. Arch', status: 'next', time: 'SOON' },
+  ]
+
+  const current = [
+    { topic: 'Spring Boot avanzado', detail: 'Arquitectura de servicios, DTOs, validación, manejo de errores' },
+    { topic: 'REST API design', detail: 'Buenas prácticas, versionado, documentación con OpenAPI' },
+    { topic: 'SQL y JPA', detail: 'Queries optimizadas, relaciones, transacciones' },
+    { topic: 'Agloval — Sistema de Presupuestos', detail: 'Proyecto real en construcción. Backend completo con Spring Boot.' },
   ]
 
   return (
-    <section id="learning" style={{
-      padding: '2.5rem 2rem',
-      borderTop: '1px solid rgba(255,255,255,0.04)',
-    }}>
-      <div style={{
-        fontFamily: 'var(--mono)',
-        fontSize: '10px',
-        letterSpacing: '0.15em',
-        textTransform: 'uppercase' as const,
-        color: 'rgba(225,29,72,0.4)',
-        marginBottom: '4px',
-      }}>03 / aprendiendo</div>
+    <section id="learning" className="learning-section" aria-labelledby="learning-title">
+      <style>{`
+        .learning-section {
+          padding: 6rem 1.5rem;
+          max-width: 900px;
+          margin: 0 auto;
+          border-top: 1px solid rgba(255,255,255,0.04);
+        }
 
-      <h2 style={{
-        fontSize: '28px',
-        fontWeight: 900,
-        color: '#fff',
-        marginBottom: '1.5rem',
-        letterSpacing: '-0.02em',
-        textTransform: 'uppercase' as const,
-        fontFamily: 'var(--body)',
-      }}>Roadmap técnico</h2>
+        .learning-label {
+          font-family: var(--mono);
+          font-size: 11px;
+          color: var(--acc);
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          margin-bottom: 0.5rem;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .learning-label::before {
+          content: '';
+          display: inline-block;
+          width: 18px;
+          height: 1px;
+          background: var(--acc);
+        }
 
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        overflowX: 'auto' as const,
-        padding: '0.5rem 0',
-        gap: 0,
-        marginBottom: '1.5rem',
-      }}>
+        .learning-title {
+          font-family: var(--body);
+          font-size: 34px;
+          font-weight: 900;
+          color: #fafafa;
+          margin: 0 0 0.4rem;
+          line-height: 1.1;
+        }
+
+        .learning-subtitle {
+          font-size: 15px;
+          font-weight: 300;
+          color: var(--muted);
+          margin: 0 0 2.5rem;
+        }
+
+        .roadmap-wrap {
+          display: flex;
+          align-items: center;
+          overflow-x: auto;
+          padding: 0.5rem 0 1rem;
+          gap: 0;
+          margin-bottom: 2.5rem;
+          scrollbar-width: none;
+        }
+        .roadmap-wrap::-webkit-scrollbar { display: none; }
+
+        .roadmap-step {
+          display: flex;
+          align-items: center;
+          flex-shrink: 0;
+        }
+
+        .step-inner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          min-width: 80px;
+        }
+
+        .step-box {
+          width: 44px;
+          height: 44px;
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: var(--mono);
+          font-size: 14px;
+          font-weight: 700;
+          margin-bottom: 8px;
+          text-align: center;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+        }
+        .step-box.done {
+          background: rgba(167,139,250,0.08);
+          border: 1.5px solid var(--acc3);
+          color: var(--acc3);
+        }
+        .step-box.now {
+          background: rgba(245,158,11,0.08);
+          border: 1.5px solid var(--acc2);
+          color: var(--acc2);
+        }
+        .step-box.next {
+          background: var(--bg3);
+          border: 1.5px solid rgba(255,255,255,0.06);
+          color: var(--muted);
+        }
+
+        .step-label {
+          font-family: var(--mono);
+          font-size: 9px;
+          color: var(--muted);
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+        }
+        .step-label.done { color: var(--acc3); }
+        .step-label.now { color: var(--acc2); }
+
+        .step-connector {
+          width: 24px;
+          height: 1px;
+          background: rgba(255,255,255,0.05);
+          flex-shrink: 0;
+          margin-bottom: 20px;
+        }
+
+        .currently-label {
+          font-family: var(--mono);
+          font-size: 10px;
+          color: var(--muted);
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+        }
+
+        .current-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0.75rem;
+          margin-bottom: 2rem;
+        }
+
+        .current-card {
+          background: var(--bg2);
+          border: 1px solid var(--border);
+          border-radius: 10px;
+          padding: 1rem 1.25rem;
+          transition: border-color 0.2s;
+        }
+        .current-card:hover {
+          border-color: rgba(225,29,72,0.2);
+        }
+
+        .current-topic {
+          font-family: var(--body);
+          font-size: 14px;
+          font-weight: 600;
+          color: #fafafa;
+          margin: 0 0 4px;
+        }
+
+        .current-detail {
+          font-family: var(--body);
+          font-size: 12px;
+          font-weight: 300;
+          color: var(--muted);
+          line-height: 1.5;
+          margin: 0;
+        }
+
+        .philosophy {
+          font-family: var(--mono);
+          font-size: 11px;
+          color: rgba(82,82,91,0.8);
+          padding: 1rem 1.25rem;
+          background: rgba(255,255,255,0.01);
+          border: 1px solid rgba(255,255,255,0.04);
+          border-radius: 8px;
+          line-height: 2;
+          letter-spacing: 0.02em;
+        }
+
+        .philosophy-acc {
+          color: rgba(225,29,72,0.5);
+        }
+
+        @media (max-width: 640px) {
+          .current-grid {
+            grid-template-columns: 1fr;
+          }
+          .learning-title {
+            font-size: 26px;
+          }
+        }
+      `}</style>
+
+      <p className="learning-label" aria-hidden="true">Aprendiendo</p>
+      <h2 className="learning-title" id="learning-title">Roadmap técnico</h2>
+      <p className="learning-subtitle">Lo que sé, lo que estoy aprendiendo, hacia dónde voy.</p>
+
+      <div className="roadmap-wrap" role="list" aria-label="Roadmap de aprendizaje">
         {roadmap.map((step, i) => (
-          <div key={i} style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
-            <div style={{ display: 'flex', flexDirection: 'column' as const, alignItems: 'center', minWidth: '76px' }}>
-              <div style={{
-                width: '40px',
-                height: '40px',
-                borderRadius: '2px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontFamily: 'var(--mono)',
-                fontSize: '8px',
-                fontWeight: 700,
-                marginBottom: '6px',
-                textAlign: 'center' as const,
-                letterSpacing: '0.04em',
-                textTransform: 'uppercase' as const,
-                background: step.status === 'done' ? 'rgba(167,139,250,0.08)' : step.status === 'now' ? 'rgba(245,158,11,0.08)' : 'var(--bg3)',
-                border: `1.5px solid ${step.status === 'done' ? 'var(--acc3)' : step.status === 'now' ? 'var(--acc2)' : 'rgba(255,255,255,0.05)'}`,
-                color: step.status === 'done' ? 'var(--acc3)' : step.status === 'now' ? 'var(--acc2)' : 'var(--muted)',
-              }}>
-                {step.status === 'done' ? '✓' : step.status === 'now' ? 'NOW' : step.time}
+          <div key={i} className="roadmap-step" role="listitem">
+            <div className="step-inner">
+              <div className={`step-box ${step.status}`}>
+                {step.time}
               </div>
-              <span style={{
-                fontFamily: 'var(--mono)',
-                fontSize: '9px',
-                color: 'var(--muted)',
-                textAlign: 'center' as const,
-                textTransform: 'uppercase' as const,
-                letterSpacing: '0.06em',
-              }}>{step.label}</span>
+              <span className={`step-label ${step.status}`}>{step.label}</span>
             </div>
-            {i < roadmap.length - 1 && (
-              <div style={{
-                width: '20px',
-                height: '1px',
-                background: 'rgba(255,255,255,0.05)',
-                flexShrink: 0,
-                marginBottom: '18px',
-              }} />
-            )}
+            {i < roadmap.length - 1 && <div className="step-connector" aria-hidden="true" />}
           </div>
         ))}
       </div>
 
-      <div style={{
-        fontFamily: 'var(--mono)',
-        fontSize: '10px',
-        color: 'rgba(82,82,91,0.7)',
-        padding: '10px 14px',
-        background: 'rgba(255,255,255,0.01)',
-        border: '1px solid rgba(255,255,255,0.04)',
-        lineHeight: 1.8,
-        letterSpacing: '0.02em',
-      }}>
-        <span style={{ color: 'rgba(225,29,72,0.4)' }}>// </span>
-        Curso de 8h en IA para programación: orquestación, agentes, workflows — no videocoding.<br />
-        <span style={{ color: 'rgba(225,29,72,0.4)' }}>// </span>
-        Filosofía: construir mientras aprendo. IA como herramienta, no como muleta.
+      <p className="currently-label">Estudiando ahora</p>
+      <div className="current-grid">
+        {current.map((item, i) => (
+          <div key={i} className="current-card">
+            <p className="current-topic">{item.topic}</p>
+            <p className="current-detail">{item.detail}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="philosophy">
+        <span className="philosophy-acc">// </span>
+        No sigo tutoriales pasivos. Aprendo construyendo — usando IA como herramienta de orquestación, no como muleta.<br />
+        <span className="philosophy-acc">// </span>
+        Cada tecnología del roadmap tiene un proyecto real asociado. Sin proyecto, no cuento como aprendido.
       </div>
     </section>
   )
