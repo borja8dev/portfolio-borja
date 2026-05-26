@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: 'Borja Rodríguez — Junior Backend Developer | Java · Spring Boot',
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Borja Rodríguez — Junior Backend Developer',
     description: 'Desarrollador backend junior especializado en Java y Spring Boot. Disponible ahora mismo.',
-    url: 'https://portfolio-borja.vercel.app',
+    url: 'https://portfolio-borja-ten.vercel.app',
     siteName: 'Borja.dev',
     locale: 'es_ES',
     type: 'website',
@@ -32,7 +33,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
