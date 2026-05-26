@@ -22,7 +22,7 @@ export const projects: Project[] = [
     tagline: 'Proyecto principal',
     description:
       'Módulo backend completo para Agloval SL. Gestión de presupuestos con generación automática, cálculo dinámico de precios y APIs REST documentadas.',
-    status: 'main',
+    status: 'wip',
     stackCurrent: ['Java', 'Spring Boot', 'REST APIs', 'SQL', 'JPA / Hibernate', 'Maven'],
     stackRoadmap: ['Docker', 'Testing', 'CI/CD'],
     features: [
@@ -31,7 +31,7 @@ export const projects: Project[] = [
       'Persistencia en base de datos',
       'APIs REST documentadas',
     ],
-    repoUrl: 'https://github.com/borja8dev', // actualiza cuando esté listo
+    repoUrl: 'https://github.com/borja8dev/agloval-budget-system',
     year: 2026,
     featured: true,
   },
