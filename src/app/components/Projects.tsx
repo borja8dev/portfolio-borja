@@ -2,7 +2,7 @@ import { projects } from '@/lib/projects'
 import ProjectCard from './ProjectCard'
 
 export default function Projects() {
-  const featured = projects.find((p) => p.featured)
+  const featuredProjects = projects.filter((p) => p.featured)
   const rest = projects.filter((p) => !p.featured)
 
   return (
@@ -311,7 +311,9 @@ export default function Projects() {
       <p className="projects-subtitle">Proyectos reales — no TODOs, no ejercicios de tutorial.</p>
 
       <div className="projects-grid">
-        {featured && <ProjectCard project={featured} featured />}
+        {featuredProjects.map((project) => (
+          <ProjectCard key={project.id} project={project} featured />
+        ))}
         {rest.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

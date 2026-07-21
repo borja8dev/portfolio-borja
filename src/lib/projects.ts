@@ -23,7 +23,16 @@ export const projects: Project[] = [
     description:
       'Sistema backend completo para generación, cálculo y seguimiento de presupuestos, con arquitectura escalable y APIs REST documentadas.',
     status: 'main',
-    stackCurrent: ['Java 21', 'Spring Boot 3', 'PostgreSQL', 'JPA / Hibernate', 'REST APIs', 'Maven'],
+    stackCurrent: [
+      'Java 21',
+      'Spring Boot 3',
+      'PostgreSQL',
+      'JPA / Hibernate',
+      'REST APIs',
+      'Maven',
+      'Git · GitHub',
+      'Linux basics',
+    ],
     features: [
       'Generación automática de presupuestos',
       'Cálculo dinámico de precios',
@@ -83,5 +92,6 @@ export const projects: Project[] = [
     ],
     repoUrl: 'https://github.com/borja8dev/material-optimizer',
     year: 2026,
+    featured: true,
   },
 ]

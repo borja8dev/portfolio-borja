@@ -93,7 +93,7 @@ export default function About() {
           { label: 'SQL', type: 'a' },
           { label: 'Git · GitHub', type: 'b' },
           { label: 'Linux basics', type: 'b' },
-          { label: 'Docker →', type: 'c' },
+          { label: 'Docker', type: 'b' },
           { label: 'Kubernetes →', type: 'c' },
           { label: 'CI/CD →', type: 'c' },
           { label: 'Testing →', type: 'c' },

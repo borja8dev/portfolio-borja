@@ -1,9 +1,9 @@
 export default function Learning() {
   const roadmap = [
     { label: 'Java', status: 'done', time: '✓' },
-    { label: 'Spring Boot', status: 'now', time: 'NOW' },
-    { label: 'Docker', status: 'next', time: 'SOON' },
-    { label: 'K8s', status: 'next', time: 'SOON' },
+    { label: 'Spring Boot', status: 'done', time: '✓' },
+    { label: 'Docker', status: 'done', time: '✓' },
+    { label: 'K8s', status: 'now', time: 'NOW' },
     { label: 'CI/CD', status: 'next', time: 'SOON' },
     { label: 'Dist. Arch', status: 'next', time: 'SOON' },
   ]
