@@ -12,7 +12,7 @@ export default function Learning() {
     { topic: 'Spring Boot avanzado', detail: 'Arquitectura de servicios, DTOs, validación, manejo de errores' },
     { topic: 'REST API design', detail: 'Buenas prácticas, versionado, documentación con OpenAPI' },
     { topic: 'SQL y JPA', detail: 'Queries optimizadas, relaciones, transacciones' },
-    { topic: 'Agloval — Sistema de Presupuestos', detail: 'Proyecto real en construcción. Backend completo con Spring Boot.' },
+    { topic: 'Budget Management System', detail: 'Proyecto real completado. Backend completo con Spring Boot.' },
   ]
 
   return (
