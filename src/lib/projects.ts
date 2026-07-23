@@ -39,7 +39,7 @@ export const projects: Project[] = [
       'Persistencia en base de datos relacional',
       'APIs REST documentadas',
     ],
-    repoUrl: 'https://github.com/borja8dev/budget-management-system',
+    repoUrl: 'https://github.com/borja8dev/quotation-system-api',
     year: 2026,
     featured: true,
   },
