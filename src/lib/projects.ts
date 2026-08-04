@@ -68,10 +68,10 @@ export const projects: Project[] = [
   {
     id: 'material-optimizer',
     name: 'Material Cutting Optimizer',
-    tagline: 'Prototipo en desarrollo',
+    tagline: 'Proyecto completo',
     description:
-      'Prototipo full-stack que optimiza automáticamente cortes de materiales (tableros, telas, acero, vidrio) minimizando desperdicio y costos, con arquitectura hexagonal y tests desde el día 1.',
-    status: 'wip',
+      'Calculadora full-stack para cortes personalizados de tableros de madera a partir de medidas estándar, construida para un negocio real del sector. Arquitectura hexagonal, cobertura de tests cercana al 98% en el backend y documentación lista para producción.',
+    status: 'main',
     stackCurrent: [
       'React 18',
       'TypeScript',
@@ -82,15 +82,14 @@ export const projects: Project[] = [
       'Jest',
       'Cypress',
       'Tailwind CSS',
-      'shadcn/ui',
     ],
     features: [
       'Arquitectura hexagonal (domain/application/infrastructure)',
-      'Tests unitarios (Jest) y E2E (Cypress) desde el inicio',
-      'Schema de base de datos preparado para producción',
-      'Algoritmo de optimización de cortes (problema NP-hard)',
+      '131 tests (Jest + Cypress), ~98% de cobertura en el backend',
+      'TypeScript estricto de punta a punta, cero "any"',
+      'Documentación completa: arquitectura, decisiones técnicas, guía de migración a base de datos real',
     ],
-    repoUrl: 'https://github.com/borja8dev/material-optimizer',
+    repoUrl: 'https://github.com/borja8dev/agloval-custom-cutter',
     year: 2026,
     featured: true,
   },
