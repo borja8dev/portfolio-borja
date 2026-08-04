@@ -3,6 +3,8 @@ export default function Learning() {
     { label: 'Java', status: 'done', time: '✓' },
     { label: 'Spring Boot', status: 'done', time: '✓' },
     { label: 'Docker', status: 'done', time: '✓' },
+    { label: 'Node.js', status: 'done', time: '✓' },
+    { label: 'TypeScript', status: 'done', time: '✓' },
     { label: 'K8s', status: 'now', time: 'NOW' },
     { label: 'CI/CD', status: 'next', time: 'SOON' },
     { label: 'Dist. Arch', status: 'next', time: 'SOON' },
@@ -12,7 +14,7 @@ export default function Learning() {
     { topic: 'Spring Boot avanzado', detail: 'Arquitectura de servicios, DTOs, validación, manejo de errores' },
     { topic: 'REST API design', detail: 'Buenas prácticas, versionado, documentación con OpenAPI' },
     { topic: 'SQL y JPA', detail: 'Queries optimizadas, relaciones, transacciones' },
-    { topic: 'Budget Management System', detail: 'Proyecto real completado. Backend completo con Spring Boot.' },
+    { topic: 'Kubernetes', detail: 'Pods, deployments, services — orquestación de contenedores' },
   ]
 
   return (

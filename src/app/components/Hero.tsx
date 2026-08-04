@@ -85,7 +85,7 @@ export default function Hero() {
               { text: '24 años', hi: false },
               { text: 'DAM en progreso', hi: true },
               { text: 'Feb 2026 → ahora', hi: false },
-              { text: '3-4 meses · proyectos reales', hi: true },
+              { text: '6 meses · proyectos reales', hi: true },
             ].map((item, i) => (
               <span key={i} style={{
                 fontFamily: 'var(--mono)',
@@ -114,7 +114,7 @@ export default function Hero() {
           <strong style={{ color: '#e4e4e7', fontWeight: 600 }}>
             Una decisión. Cero dudas.
           </strong>{' '}
-          En 3-4 meses pasé de cero a proyectos reales en producción. No soy un junior de manual — tengo mentalidad, velocidad y arquitectura real que lo demuestra.
+          En 6 meses pasé de cero a proyectos reales en producción. No soy un junior de manual — tengo mentalidad, velocidad y arquitectura real que lo demuestra.
         </p>
 
         <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' as const }}>

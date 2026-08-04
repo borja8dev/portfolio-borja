@@ -53,7 +53,8 @@ export default function About() {
           {[
             { date: 'Feb 2026', text: 'Punto de inflexión — decisión 100% backend', active: false },
             { date: 'Feb–May 26', text: 'Java intensivo + Spring Boot + primeros proyectos reales', active: false },
-            { date: 'Mayo 2026', text: '1er semestre DAM completado · Open to work', active: true },
+            { date: 'Mayo 2026', text: '1er semestre DAM completado · Open to work', active: false },
+            { date: 'Ago 2026', text: 'Segundo proyecto real completado · sigo abierto a oportunidades', active: true },
             { date: 'Sep–Feb 27', text: 'Últimos semestres + prácticas + TFG', active: false },
             { date: 'Dic 2026', text: 'Objetivo: junior backend contratado', active: false },
           ].map((item, i) => (
@@ -94,7 +95,7 @@ export default function About() {
           { label: 'Git · GitHub', type: 'b' },
           { label: 'Linux basics', type: 'b' },
           { label: 'Docker', type: 'b' },
-          { label: 'Kubernetes →', type: 'c' },
+          { label: 'Kubernetes', type: 'b' },
           { label: 'CI/CD →', type: 'c' },
           { label: 'Testing →', type: 'c' },
           { label: 'Dist. Arch →', type: 'c' },
