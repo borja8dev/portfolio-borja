@@ -1,4 +1,4 @@
-export type ProjectStatus = 'main' | 'wip' | 'learning'
+export type ProjectStatus = 'main'
 
 export interface Project {
   id: string
@@ -19,9 +19,9 @@ export const projects: Project[] = [
   {
     id: 'budget-system',
     name: 'Budget Management System',
-    tagline: 'Proyecto principal',
+    tagline: 'Backend · Java',
     description:
-      'Sistema backend completo para generación, cálculo y seguimiento de presupuestos, con arquitectura escalable y APIs REST documentadas.',
+      'Sistema backend completo para generación, cálculo y seguimiento de presupuestos, con arquitectura escalable y APIs REST documentadas. Backend en Java 21 y Spring Boot 3 con persistencia relacional.',
     status: 'main',
     stackCurrent: [
       'Java 21',
@@ -44,31 +44,9 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: 'spring-practice',
-    name: 'Práctica Spring Boot',
-    tagline: 'En construcción',
-    description:
-      'Patrones de arquitectura backend: servicios REST, DTOs, validación, manejo de errores.',
-    status: 'wip',
-    stackCurrent: ['Spring Boot', 'REST', 'DTOs'],
-    repoUrl: 'https://github.com/borja8dev',
-    year: 2026,
-  },
-  {
-    id: 'exploration',
-    name: 'Exploración y lógica',
-    tagline: 'Aprendizaje activo',
-    description:
-      'Pruebas de concepto y algoritmos. Aprendo construyendo, usando IA como herramienta de orquestación.',
-    status: 'learning',
-    stackCurrent: ['Java', 'Algoritmos', 'IA tools'],
-    repoUrl: 'https://github.com/borja8dev',
-    year: 2026,
-  },
-  {
     id: 'material-optimizer',
     name: 'Material Cutting Optimizer',
-    tagline: 'Proyecto completo',
+    tagline: 'Fullstack · TypeScript',
     description:
       'Calculadora full-stack para cortes personalizados de tableros de madera a partir de medidas estándar, construida para un negocio real del sector. Arquitectura hexagonal, cobertura de tests cercana al 98% en el backend y documentación lista para producción.',
     status: 'main',

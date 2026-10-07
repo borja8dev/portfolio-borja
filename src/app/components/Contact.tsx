@@ -31,7 +31,7 @@ export default function Contact() {
         marginBottom: '1.25rem',
         letterSpacing: '0.02em',
       }}>
-        <span style={{ color: 'rgba(225,29,72,0.4)' }}>// </span>
+        <span style={{ color: 'rgba(225,29,72,0.4)' }}>{'// '}</span>
         Escríbeme. Respondo rápido.
       </p>
 

@@ -57,7 +57,7 @@ export default function Hero() {
           textTransform: 'uppercase' as const,
         }}>
           BACKEND<br />
-          <span style={{ color: 'var(--acc)' }}>DEVELOPER.</span>
+          <span style={{ color: 'var(--acc)' }}>SOFTWARE ENGINEER.</span>
           <span style={{
             fontSize: '20px',
             fontWeight: 300,
@@ -67,7 +67,7 @@ export default function Hero() {
             letterSpacing: '-0.01em',
             marginTop: '10px',
           }}>
-            Java · Spring Boot · REST APIs · SQL
+            Rigorous Architecture &amp; Security-First
           </span>
         </h1>
 
@@ -82,10 +82,10 @@ export default function Hero() {
             maxWidth: '520px',
           }}>
             {[
-              { text: '24 años', hi: false },
-              { text: 'DAM en progreso', hi: true },
-              { text: 'Feb 2026 → ahora', hi: false },
-              { text: '6 meses · proyectos reales', hi: true },
+              { text: 'Hexagonal Architecture', hi: false },
+              { text: '~98% test coverage', hi: true },
+              { text: 'AI-augmented', hi: false },
+              { text: 'Fullstack capable', hi: true },
             ].map((item, i) => (
               <span key={i} style={{
                 fontFamily: 'var(--mono)',
@@ -110,12 +110,28 @@ export default function Hero() {
           marginBottom: '2rem',
           fontWeight: 300,
         }}>
-          En febrero de 2026 tomé una decisión: backend developer.{' '}
+          Backend engineer construyendo sistemas production-grade.{' '}
           <strong style={{ color: '#e4e4e7', fontWeight: 600 }}>
-            Una decisión. Cero dudas.
+            Arquitectura rigurosa, testing exhaustivo, security-first.
           </strong>{' '}
-          En 6 meses pasé de cero a proyectos reales en producción. No soy un junior de manual — tengo mentalidad, velocidad y arquitectura real que lo demuestra.
+          Uso IA como herramienta de orquestación: el engineer lidera, sin atajos.
         </p>
+
+        <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '5px', marginBottom: '2rem' }}>
+          {['Java', 'Spring Boot', 'React 18', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'Jest', 'Cypress'].map((tech) => (
+            <span key={tech} style={{
+              fontFamily: 'var(--mono)',
+              fontSize: '9px',
+              padding: '5px 10px',
+              borderRadius: '2px',
+              border: '1px solid rgba(245,158,11,0.2)',
+              background: 'rgba(245,158,11,0.03)',
+              color: 'var(--acc2)',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase' as const,
+            }}>{tech}</span>
+          ))}
+        </div>
 
         <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' as const }}>
           <a href="#projects" style={{
@@ -172,12 +188,12 @@ export default function Hero() {
           </div>
           <div style={{ padding: '1.25rem' }}>
             {[
-              { cmd: '❯ nombre', out: 'Borja Rodríguez · Junior Backend Dev' },
+              { cmd: '❯ nombre', out: 'Borja Rodríguez · Backend Software Engineer' },
               { cmd: '❯ ubicacion', out: 'Alaquas, Valencia, España' },
               { cmd: '❯ estado', out: '● OPEN TO WORK' },
-              { cmd: '❯ stack', out: 'Java · Spring Boot · REST APIs · SQL' },
-              { cmd: '❯ formacion', out: 'DAM + Backend autodidacta' },
-              { cmd: '❯ objetivo', out: 'Junior Backend contratado · dic 2026' },
+              { cmd: '❯ stack', out: 'Java · Spring Boot · TypeScript · Node.js · React' },
+              { cmd: '❯ enfoque', out: 'Hexagonal · Testing · Security-first' },
+              { cmd: '❯ formacion', out: 'DAM + construcción de proyectos reales' },
               { cmd: '❯ contacto', out: 'borja8.dev@gmail.com' },
             ].map((line, i) => (
               <div key={i} style={{ marginBottom: '10px' }}>
