@@ -6,15 +6,15 @@ export default function Learning() {
     { label: 'Node.js', status: 'done', time: '✓' },
     { label: 'TypeScript', status: 'done', time: '✓' },
     { label: 'K8s', status: 'now', time: 'NOW' },
-    { label: 'CI/CD', status: 'next', time: 'SOON' },
-    { label: 'Dist. Arch', status: 'next', time: 'SOON' },
+    { label: 'CI/CD', status: 'now', time: 'NOW' },
+    { label: 'Dist. Arch', status: 'next', time: 'NEXT' },
   ]
 
   const current = [
-    { topic: 'Spring Boot avanzado', detail: 'Arquitectura de servicios, DTOs, validación, manejo de errores' },
-    { topic: 'REST API design', detail: 'Buenas prácticas, versionado, documentación con OpenAPI' },
-    { topic: 'SQL y JPA', detail: 'Queries optimizadas, relaciones, transacciones' },
-    { topic: 'Kubernetes', detail: 'Pods, deployments, services — orquestación de contenedores' },
+    { topic: 'Kubernetes', detail: 'Pods, deployments, services — desplegando mis propios proyectos, no solo leyendo sobre ello' },
+    { topic: 'CI/CD', detail: 'Pipelines que ejecutan la suite de tests y bloquean regresiones antes de integrar' },
+    { topic: 'Arquitectura distribuida', detail: 'Separación de servicios, comunicación y consistencia, aplicada sobre mis proyectos hexagonales' },
+    { topic: 'Seguridad en APIs', detail: 'Validación de entrada, manejo de errores y diseño seguro desde la capa de dominio' },
   ]
 
   return (
@@ -206,9 +206,9 @@ export default function Learning() {
         }
       `}</style>
 
-      <p className="learning-label" aria-hidden="true">Aprendiendo</p>
+      <p className="learning-label" aria-hidden="true">Learned through rigorous building</p>
       <h2 className="learning-title" id="learning-title">Roadmap técnico</h2>
-      <p className="learning-subtitle">Lo que sé, lo que estoy aprendiendo, hacia dónde voy.</p>
+      <p className="learning-subtitle">Lo que ya construí, lo que estoy construyendo ahora, hacia dónde voy.</p>
 
       <div className="roadmap-wrap" role="list" aria-label="Roadmap de aprendizaje">
         {roadmap.map((step, i) => (
@@ -224,7 +224,7 @@ export default function Learning() {
         ))}
       </div>
 
-      <p className="currently-label">Estudiando ahora</p>
+      <p className="currently-label">Construyendo ahora</p>
       <div className="current-grid">
         {current.map((item, i) => (
           <div key={i} className="current-card">

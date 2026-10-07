@@ -19,9 +19,9 @@ export const projects: Project[] = [
   {
     id: 'budget-system',
     name: 'Budget Management System',
-    tagline: 'Proyecto principal',
+    tagline: 'Backend · Java',
     description:
-      'Sistema backend completo para generación, cálculo y seguimiento de presupuestos, con arquitectura escalable y APIs REST documentadas.',
+      'Sistema backend completo para generación, cálculo y seguimiento de presupuestos, con arquitectura escalable y APIs REST documentadas. Backend en Java 21 y Spring Boot 3 con persistencia relacional.',
     status: 'main',
     stackCurrent: [
       'Java 21',
@@ -68,7 +68,7 @@ export const projects: Project[] = [
   {
     id: 'material-optimizer',
     name: 'Material Cutting Optimizer',
-    tagline: 'Proyecto completo',
+    tagline: 'Fullstack · TypeScript',
     description:
       'Calculadora full-stack para cortes personalizados de tableros de madera a partir de medidas estándar, construida para un negocio real del sector. Arquitectura hexagonal, cobertura de tests cercana al 98% en el backend y documentación lista para producción.',
     status: 'main',

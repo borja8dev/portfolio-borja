@@ -21,7 +21,7 @@ export default function About() {
         letterSpacing: '-0.02em',
         textTransform: 'uppercase' as const,
         fontFamily: 'var(--body)',
-      }}>Por qué soy diferente</h2>
+      }}>Cómo trabajo</h2>
 
       <div className="two-col-grid" style={{
         display: 'grid',
@@ -31,9 +31,9 @@ export default function About() {
       }}>
         <div>
           {[
-            { text: 'Estudié DAM online mientras aprendía backend por mi cuenta. Entendí desde el principio que la única forma de entrar al mercado tech era ', highlight: 'construir cosas reales', end: ', no acumular teoría.' },
-            { text: 'Pensamiento lógico estructurado. Velocidad de aprendizaje alta. ', highlight: 'Claridad absoluta sobre hacia dónde voy', end: ': backend donde sea irremplazable. No me asustan los retos desconocidos.' },
-            { text: 'Disponible ahora mismo. Dos semestres de DAM + prácticas + TFG (sept 2026 – feb 2027) en paralelo con mi primer trabajo.', highlight: '', end: '' },
+            { text: 'Backend engineer construyendo sistemas production-grade. ', highlight: 'Rigor: cada decisión documentada, cada capa testeada.', end: ' Arquitectura hexagonal para separar dominio, aplicación e infraestructura, y seguridad pensada desde el diseño, no añadida al final.' },
+            { text: 'Uso IA como herramienta de orquestación para mejorar la calidad, no como sustituto: ', highlight: 'el engineer lidera, sin atajos.', end: ' Reviso, cuestiono y valido cada resultado antes de que llegue al código.' },
+            { text: 'La prueba está en los números: ', highlight: '~98% de cobertura de tests', end: ' en el backend de Material Cutting Optimizer. No sigo tutoriales pasivos — construyo proyectos reales. Cursando DAM en paralelo y disponible ahora mismo.' },
           ].map((p, i) => (
             <p key={i} style={{
               fontSize: '14px',
@@ -51,12 +51,11 @@ export default function About() {
 
         <div>
           {[
-            { date: 'Feb 2026', text: 'Punto de inflexión — decisión 100% backend', active: false },
-            { date: 'Feb–May 26', text: 'Java intensivo + Spring Boot + primeros proyectos reales', active: false },
-            { date: 'Mayo 2026', text: '1er semestre DAM completado · Open to work', active: false },
-            { date: 'Ago 2026', text: 'Segundo proyecto real completado · sigo abierto a oportunidades', active: true },
-            { date: 'Sep–Feb 27', text: 'Últimos semestres + prácticas + TFG', active: false },
-            { date: 'Dic 2026', text: 'Objetivo: junior backend contratado', active: false },
+            { date: 'Feb 2026', text: 'Enfoque backend: Java, Spring Boot y primeros proyectos reales', active: false },
+            { date: 'Mayo 2026', text: 'Budget Management System · 1er semestre DAM completado', active: false },
+            { date: 'Ago 2026', text: 'Material Cutting Optimizer: fullstack, hexagonal, ~98% coverage', active: false },
+            { date: 'Ahora', text: 'Kubernetes, CI/CD y arquitectura distribuida — aprendidos construyendo', active: true },
+            { date: 'Sep–Feb 27', text: 'Últimos semestres DAM + prácticas + TFG', active: false },
           ].map((item, i) => (
             <div key={i} style={{ display: 'flex', gap: '10px', marginBottom: '14px' }}>
               <div style={{ display: 'flex', flexDirection: 'column' as const, alignItems: 'center', width: '40px', flexShrink: 0 }}>
@@ -92,12 +91,18 @@ export default function About() {
           { label: 'Spring Boot', type: 'a' },
           { label: 'REST APIs', type: 'a' },
           { label: 'SQL', type: 'a' },
+          { label: 'React 18', type: 'a' },
+          { label: 'TypeScript', type: 'a' },
+          { label: 'Node.js', type: 'a' },
+          { label: 'Express', type: 'a' },
+          { label: 'Prisma', type: 'a' },
+          { label: 'Jest', type: 'a' },
+          { label: 'Cypress', type: 'a' },
           { label: 'Git · GitHub', type: 'b' },
           { label: 'Linux basics', type: 'b' },
           { label: 'Docker', type: 'b' },
-          { label: 'Kubernetes', type: 'b' },
+          { label: 'Kubernetes →', type: 'c' },
           { label: 'CI/CD →', type: 'c' },
-          { label: 'Testing →', type: 'c' },
           { label: 'Dist. Arch →', type: 'c' },
         ].map((sk, i) => (
           <span key={i} style={{

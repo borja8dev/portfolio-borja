@@ -3,13 +3,13 @@ import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
-  title: 'Borja Rodríguez — Junior Backend Developer | Java · Spring Boot',
-  description: 'Desarrollador backend junior especializado en Java y Spring Boot. Proyectos reales, mentalidad estratégica y disponible para trabajar. Alaquas, Valencia.',
-  keywords: ['backend developer', 'java', 'spring boot', 'junior developer', 'valencia', 'spain'],
+  title: 'Borja Rodríguez — Backend Software Engineer | Rigorous Architecture & Security-First',
+  description: 'Backend Software Engineer: arquitectura hexagonal, testing exhaustivo y diseño security-first con Java, Spring Boot y TypeScript. IA como herramienta de orquestación. Alaquas, Valencia.',
+  keywords: ['backend software engineer', 'java', 'spring boot', 'typescript', 'hexagonal architecture', 'valencia', 'spain'],
   authors: [{ name: 'Borja Rodríguez' }],
   openGraph: {
-    title: 'Borja Rodríguez — Junior Backend Developer',
-    description: 'Desarrollador backend junior especializado en Java y Spring Boot. Disponible ahora mismo.',
+    title: 'Borja Rodríguez — Backend Software Engineer',
+    description: 'Backend Software Engineer con arquitectura rigurosa y enfoque security-first. Disponible ahora mismo.',
     url: 'https://portfolio-borja-ten.vercel.app',
     siteName: 'Borja.dev',
     locale: 'es_ES',
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Borja Rodríguez — Junior Backend Developer',
-    description: 'Desarrollador backend junior especializado en Java y Spring Boot. Disponible ahora mismo.',
+    title: 'Borja Rodríguez — Backend Software Engineer',
+    description: 'Backend Software Engineer con arquitectura rigurosa y enfoque security-first. Disponible ahora mismo.',
   },
   robots: {
     index: true,
