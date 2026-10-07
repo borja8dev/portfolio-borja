@@ -11,7 +11,7 @@ export default function CV() {
         textTransform: 'uppercase' as const,
         color: 'rgba(225,29,72,0.4)',
         marginBottom: '4px',
-      }}>04 / curriculum</div>
+      }}>03 / curriculum</div>
 
       <h2 style={{
         fontSize: '28px',
@@ -30,8 +30,8 @@ export default function CV() {
         marginBottom: '1.5rem',
         letterSpacing: '0.02em',
       }}>
-        <span style={{ color: 'rgba(225,29,72,0.4)' }}>// </span>
-        Descarga mi CV actualizado — mayo 2026.
+        <span style={{ color: 'rgba(225,29,72,0.4)' }}>{'// '}</span>
+        Descarga mi CV actualizado — octubre 2026.
       </p>
 
       <style>{`

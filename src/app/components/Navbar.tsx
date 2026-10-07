@@ -27,7 +27,7 @@ export default function Navbar() {
         gap: '1.5rem',
         listStyle: 'none',
       }}>
-        {['about', 'projects', 'learning', 'cv', 'contact'].map((item) => (
+        {['about', 'projects', 'cv', 'contact'].map((item) => (
           <li key={item}>
             <a href={`#${item}`} style={{
               color: 'var(--muted)',

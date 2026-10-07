@@ -1,4 +1,4 @@
-export type ProjectStatus = 'main' | 'wip' | 'learning'
+export type ProjectStatus = 'main'
 
 export interface Project {
   id: string
@@ -42,28 +42,6 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/borja8dev/quotation-system-api',
     year: 2026,
     featured: true,
-  },
-  {
-    id: 'spring-practice',
-    name: 'Práctica Spring Boot',
-    tagline: 'En construcción',
-    description:
-      'Patrones de arquitectura backend: servicios REST, DTOs, validación, manejo de errores.',
-    status: 'wip',
-    stackCurrent: ['Spring Boot', 'REST', 'DTOs'],
-    repoUrl: 'https://github.com/borja8dev',
-    year: 2026,
-  },
-  {
-    id: 'exploration',
-    name: 'Exploración y lógica',
-    tagline: 'Aprendizaje activo',
-    description:
-      'Pruebas de concepto y algoritmos. Aprendo construyendo, usando IA como herramienta de orquestación.',
-    status: 'learning',
-    stackCurrent: ['Java', 'Algoritmos', 'IA tools'],
-    repoUrl: 'https://github.com/borja8dev',
-    year: 2026,
   },
   {
     id: 'material-optimizer',
